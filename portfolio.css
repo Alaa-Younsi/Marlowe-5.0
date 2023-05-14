@@ -1,0 +1,679 @@
+
+* {
+    display: flexbox;
+    box-sizing: border-box;  
+}
+
+html, body {  
+    margin: 0;  
+    min-height: 100vh; 
+    overflow: hidden;   
+    background-color: black;
+}
+
+@media screen and (max-width: 600px) {
+    html, body {  
+        margin: 0;  
+        min-height: 100%; 
+        overflow: hidden;   
+        background-color: black;
+    }
+    
+}
+
+#canvas {
+    z-index: -1;
+    width: 97.5%;
+    height: 97%;
+    margin-left: 20px;
+    margin-top: 8px;
+    border: 3px solid white;
+}
+
+@media screen and (max-width: 600px) {
+    #canvas {
+        position: absolute;
+        top: -8px;
+        left: -20px;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        border: 3px solid white;
+        margin-left: 20px;
+    }
+}
+
+#Title {
+    position: absolute;
+    top: 150px;
+    right: 400px;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 6px 6px 6px black;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    #Title {
+        position: absolute;
+        top: 50px;
+        right: 130px;
+        font-size: 32px;
+    }
+}
+
+#Main-section {
+    float: right;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 270px;
+    right: 100px;
+    
+}   
+
+@media screen and (max-width: 600px) {
+    #Main-section {
+        width: 339px;
+        height: 170px;
+        position: absolute;
+        top: 440px;
+        left: 27px; 
+    }  
+}
+
+#Hat-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    box-shadow: 8px 8px 8px black;
+    border: 2px solid white;
+}
+
+#Dark-image, #Chess1, #Darkness {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+#Tv {
+    width: 400px;
+    height: 450px;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    background-color: black;
+    box-shadow: 8px 8px 8px black;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    border: 2px solid white;
+}
+
+@media screen and (max-width: 600px) {
+    #Tv {
+        width: 300px;
+        height: 280px;
+        position: absolute;
+        top: 120px;
+        left: 45px;
+        background-color: black;
+        box-shadow: 8px 8px 8px black;
+        border-top-right-radius: 5%;
+        border-top-left-radius: 5%;
+        border: 2px solid white;
+    }
+}
+
+#Remote {
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    top: 75%;
+    background-color: #A9A9A9;
+   
+    border: 2px solid white;
+}
+
+@media screen and (max-width: 600px) {
+    #Remote {
+        width: 100%;
+        height: 25%;
+        position: absolute;
+        top: 209px;
+        left: 0px;
+        background-color: #A9A9A9;
+        border: 2px solid white;
+    }
+    
+}
+
+
+.remote-button {
+    z-index: 99;
+    width: 80px;
+    height: 30px;
+    background: linear-gradient(
+        45deg,
+        #202020,
+        white
+    );
+    border: 2px solid white;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .remote-button {
+        z-index: 99;
+        width: 60px;
+        height: 22px;
+        background: linear-gradient(
+            45deg,
+            #202020,
+            white
+        );
+        border: 2px solid white;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 15px;
+    }
+}
+
+.remote-button:active {
+    transform: translateX(3px);
+    transform: translateY(3px);
+}
+
+#Home-button {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    #Home-button {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+}
+
+#Skills-button {
+    position: absolute;
+    top: 15px;
+    left: 105px;
+}
+
+@media screen and (max-width: 600px) {
+    #Skills-button {
+        position: absolute;
+        top: 5px;
+        left: 77px;
+    }
+}
+
+#Info-button {
+    position: absolute;
+    top: 15px;
+    left: 205px;
+}
+
+@media screen and (max-width: 600px) {
+    #Info-button {
+        position: absolute;
+        top: 5px;
+        left: 151px;
+    }
+}
+
+#Works-button {
+    position: absolute;
+    top: 15px;
+    left: 305px;
+}
+
+@media screen and (max-width: 600px) {
+    #Works-button {
+        position: absolute;
+        top: 5px;
+        left: 225px;
+    }
+}
+
+#Certificates-button {
+    position: absolute;
+    top: 55px;
+    left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    #Certificates-button {
+        position: absolute;
+        top: 37px;
+        left: 5px;
+    }
+}
+
+
+#Blog-button {
+    position: absolute;
+    top: 55px;
+    left: 105px;
+}
+
+@media screen and (max-width: 600px) {
+    #Blog-button {
+        position: absolute;
+        top: 37px;
+        left: 77px;
+    }
+}
+
+#Contact-button {
+    position: absolute;
+    top: 55px;
+    left: 205px;
+}
+
+@media screen and (max-width: 600px) {
+    #Contact-button {
+        position: absolute;
+        top: 37px;
+        left: 151px;
+    }
+}
+
+#Off-button {
+    position: absolute;
+    top: 55px;
+    left: 305px;
+}
+
+@media screen and (max-width: 600px) {
+    #Off-button {
+        position: absolute;
+        top: 37px;
+        left: 225px;
+    }
+}
+
+.btn{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .btn{
+        text-decoration: none;
+        color: black;
+        font-size: 9px;
+        font-weight: bold;
+    }
+}
+
+#Home-title, #Certificates-title, #Skills-title, #Info-title, #Works-title, #Blog-title, #Contact-title {
+    font-size: 18px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    #Home-title, #Certificates-title, #Skills-title, #Info-title, #Works-title, #Blog-title, #Contact-title {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+#Home {
+    position: absolute;
+    color: white;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+
+}
+
+@media screen and (max-width: 600px) {
+    #Home {
+        font-size: 12px;
+    }
+}
+
+
+#Skills, #Info, #Certificates, #Works, #Blog, #Contact {
+    position: absolute;
+    color: white;
+    width: 100%;
+    z-index: 99;
+    display: none;
+}
+
+#Skills-text, #Info-text, #Certificates-text, #Works-text, #Blog-text, #Contact-text {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    #Skills-text, #Info-text, #Certificates-text, #Works-text, #Blog-text, #Contact-text {
+        margin-left: 10px;
+        font-size: 10px;
+    }
+}
+
+#Fcc {
+    text-decoration: none;
+    color: #707070; 
+}
+
+#Fcc:hover {
+    color: blue;
+}
+
+#W3s {
+    text-decoration: none;
+    color: #707070;
+}
+
+#W3s:hover {
+    color: LimeGreen;
+}
+
+.works-websites {
+    text-decoration: none;
+    color: #808080;
+}
+
+.works-websites:hover {
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.Social-media{
+    display: flex;
+    justify-content: center;
+}
+ 
+.sm {
+    display: flex;
+    background: black;
+    height: 30px;
+    width: 30px;
+    margin: 0 15px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 4px 4px 7px -1px rgba(0,124,196,0.15),
+                -4px -4px 7px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0, 124, 196, 0);
+    transition: transform 0.5s
+}
+
+@media screen and (max-width: 600px) {
+    .sm {
+        height: 12px;
+        width: 12px;
+        margin-top: 10px;
+    }
+}
+
+.sm i{
+    font-size: 30px;
+    color:#777;
+    transition: transform 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+    .sm i{
+        font-size: 20px;
+        color:#777;
+        transition: transform 0.5s;
+    }
+}
+  
+.sm:hover{
+    box-shadow:inset 4px 4px 6px -2px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                      -0.5px -0.5px 0px -1px rgba(255,255,255,1),
+                      0.5px 0.5px 0px rgba(0,0,0,0.15),
+                      0px 12px 10px -10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 124, 196, 0.1);
+    transform: translateY(2px);
+}
+
+.sm:hover i{
+    transform: scale(0.90);
+}
+
+.sm:hover .fa-facebook{
+    color: #3b5998;
+}
+
+.sm:hover .fa-twitter{
+    color: #00acee;
+}
+
+.sm:hover .fa-linkedin{
+    color: #1E90FF;
+}
+
+.sm:hover .fa-instagram{
+    color: #f14843;
+}
+
+.sm:hover .fa-youtube{
+    color: #f00;
+}
+
+.sm:hover .fa-github {
+    color: #191970;
+}
+
+#On-button {
+    position: absolute;
+    top: 170px;
+    right: 270px;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #On-button {
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        display: none;
+    }
+}
+
+
+#On-text {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    #On-text {
+        font-size: 12px;
+    }
+}
+
+#Skills-section, #Info-section, #Works-section, #Certificates-section, #Blog-section, #Contact-section {
+    background-color: black;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    box-shadow: 8px 8px 8px black;
+    border: 2px solid white;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #Info-section {
+        overflow: auto;
+    }
+}
+
+#Mini-novel {
+    color: white;
+    margin: 30px;
+    font-size: 20px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    #Mini-novel {
+        color: white;
+        margin: 25px;
+        font-size: 12px;
+        word-wrap: break-word;
+        text-align: center;
+        
+    }
+}
+
+#Dead-side {
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    position: absolute;
+    left:300px;
+    top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    #Dead-side {
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        position: absolute;
+        left: 130px;
+        top: 2px;
+    }
+}
+
+#Ds-button, #Email-button {
+    width: 170px;
+    height: 40px;
+    background: linear-gradient(
+        90deg,
+        black,
+        #707070
+    );
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    box-shadow: 5px 5px 7px white, -5px -5px 7px white;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+    #Ds-button, #Email-button {
+        width: 100px;
+        height: 25px;
+        position: absolute;
+        top: 130px;
+        left: 120px;
+        box-shadow: 5px 5px 7px white, -5px -5px 7px white;
+        
+    }
+}
+
+#Ds-button:active, #Email-button:active {
+    transform: translateX(3px);
+    transform: translateY(3px);
+}
+
+#Contact-details {
+    color: white;
+    font-size: 19px;
+    margin-left: 60px;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 600px) {
+    #Contact-details {
+        color: white;
+        font-size: 9px;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+}
+
+#Email {
+    color: #707070;
+    font-style: italic;
+}
+
+#Email-text {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    #Email-text, #Enter-image {
+        text-decoration: none;
+        color: white;
+        font-size: 11px;
+    }
+}
+
+.certificates {
+    width: 150px;
+    height: 125px;
+    border: 2px solid white;
+    box-shadow: 5px 5px 6px #707070, -5px -5px 6px #707070;
+    margin: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .certificates {
+        width: 80px;
+        height: 57px;
+        border: 2px solid white;
+        box-shadow: 3px 3px 5px #707070, -3px -3px 5px #707070;
+        margin: 20px;
+    }
+}
+
+#Marlowe {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    font-size: 50px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    color: white;
+    z-index: 999;
+}
+
+#Marlowee {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 40%;
+    left: 40%;
+}
+
+@media screen and (max-width: 600px) {
+    #Marlowee {
+        font-size: 23px;
+        top: 40%;
+        left: 100px;
+    }
+}
+
+
+
+
